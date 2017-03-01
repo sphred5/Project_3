@@ -7,7 +7,11 @@ var diceFaces = [
     'img/dice6.svg '
 ];
 
+
+
 function diceRoll() {
-    var dice = diceFaces[Math.floor(6 * Math.random())];
-    document.getElementById("dicePic").src = dice;
+    for (i=1; i<7; i++){
+      var dice = diceFaces[Math.floor(6 * Math.random())];
+      document.getElementById("dice"+i).src = dice;
+    }
 }
