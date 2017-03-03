@@ -7,12 +7,18 @@ var diceFaces = [
     'img/dice6.svg'
 ];
 
-function randNum (diceFaces){
+round = []
+
+function randNum(diceFaces){
   return Math.floor(diceFaces.length * Math.random());
 }
 
 function switchDiceImg(){
+  turn = []
   for (i=1; i<=5; i++){
-      document.getElementById("dice" + i).src = diceFaces[randNum(diceFaces)];
+      var diceVal = document.getElementById("dice" + i).src = diceFaces[randNum(diceFaces)];
+      turn.push(diceVal);
   }
+  round.push(turn);
+  return turn;
 }
