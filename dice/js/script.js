@@ -4,20 +4,15 @@ var diceFaces = [
     'img/dice3.svg ',
     'img/dice4.svg ',
     'img/dice5.svg ',
-    'img/dice6.svg '
+    'img/dice6.svg'
 ];
 
-var round = []
+function randNum (diceFaces){
+  return Math.floor(diceFaces.length * Math.random());
+}
 
-function diceRoll() {
-    var turn = []    
-    for (i=1; i<7; i++){
-      var dice = diceFaces[Math.floor(6 * Math.random())];
-      document.getElementById("dice"+i).src = dice;
-      turn.push(dice);
-      }
-
-      round.push(turn);
-      return round;
-
+function switchDiceImg(){
+  for (i=1; i<7; i++){
+    document.getElementById("dice" + i).src = diceFaces[randNum(diceFaces)];
+  }
 }

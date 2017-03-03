@@ -1,5 +1,5 @@
 function ranNum(){
-  var ranNum = Math.floor(25 * Math.random());
+  var ranNum = Math.ceil(25 * Math.random());
   return ranNum;
   }
 
