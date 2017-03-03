@@ -12,7 +12,7 @@ function randNum (diceFaces){
 }
 
 function switchDiceImg(){
-  for (i=1; i<7; i++){
-    document.getElementById("dice" + i).src = diceFaces[randNum(diceFaces)];
+  for (i=1; i<=5; i++){
+      document.getElementById("dice" + i).src = diceFaces[randNum(diceFaces)];
   }
 }
