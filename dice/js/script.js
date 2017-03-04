@@ -6,19 +6,23 @@ var diceFaces = [
     'img/dice5.svg ',
     'img/dice6.svg'
 ];
+var round = [];
 
-round = []
 
-function randNum(diceFaces){
-  return Math.floor(diceFaces.length * Math.random());
+function randNum(number){
+  return Math.floor(number * Math.random());
 }
 
 function switchDiceImg(){
-  turn = []
+  var turn = [];
   for (i=1; i<=5; i++){
-      var diceVal = document.getElementById("dice" + i).src = diceFaces[randNum(diceFaces)];
+      var diceVal = document.getElementById("dice" + i).src = diceFaces[randNum(6)];
       turn.push(diceVal);
   }
   round.push(turn);
   return turn;
+}
+
+function yahtzee(turn) {
+
 }
